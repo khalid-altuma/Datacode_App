@@ -8,7 +8,16 @@ class HomeTab  extends GetView<MainWrapperController> {
   @override
   Widget build(BuildContext context) {
     Get.put(MainWrapperController());
-    return Center(
+    return Container(
+        height: double.infinity,
+        width: double.infinity,
+        decoration: const BoxDecoration(
+        image: DecorationImage(
+        opacity: 0.75,
+        image: AssetImage("assets/unsplash4.jpg"),
+        fit: BoxFit.cover),
+    ),
+    child: Center(
         child: SizedBox(
           width: 275.0,
           height: 220.0,
@@ -66,6 +75,7 @@ class HomeTab  extends GetView<MainWrapperController> {
               ],
             ),
           ),
+        ),
         ),
       );
   }

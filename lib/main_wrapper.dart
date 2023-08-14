@@ -14,27 +14,29 @@ class MainWrapper extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
 
-      bottomNavigationBar: BottomAppBar(
-        elevation: 0,
-        notchMargin: 10,
-        child: Container(
-          padding: const EdgeInsets.symmetric(horizontal: 35, vertical: 15),
-          child: Obx(
-                () => Row(
-              mainAxisAlignment: MainAxisAlignment.spaceBetween,
-              children: [
-                _bottomAppBarItem(
-                  icon: Icons.home,
-                  page: 0,
-                  context,
-                  label: "Home",
-                ),
-                _bottomAppBarItem(
-                    icon: Icons.person,
-                    page: 1,
+      bottomNavigationBar: Card(
+        child: BottomAppBar(
+          elevation: 0,
+          notchMargin: 10,
+          child: Container(
+            padding: const EdgeInsets.symmetric(horizontal: 35, vertical: 15),
+            child: Obx(
+                  () => Row(
+                mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                children: [
+                  _bottomAppBarItem(
+                    icon: Icons.home,
+                    page: 0,
                     context,
-                    label: "Counter"),
-              ],
+                    label: "Home",
+                  ),
+                  _bottomAppBarItem(
+                      icon: Icons.person,
+                      page: 1,
+                      context,
+                      label: "Counter"),
+                ],
+              ),
             ),
           ),
         ),

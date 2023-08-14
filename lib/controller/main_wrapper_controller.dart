@@ -13,6 +13,7 @@ class MainWrapperController extends GetxController {
   RxBool isDarkTheme = false.obs;
   //
   RxInt value = 0.obs;
+  RxInt cost = 18000.obs;
 
 
   void add() {
